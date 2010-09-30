@@ -318,16 +318,16 @@ extern void musb_disable_idle(int on);
 static int cpcap_usb_connected_probe(struct platform_device *pdev)
 {
 	/* Wake up MUSB from lowpower state */
-	musb_disable_idle(1);
-	android_usb_set_connected(1);
+	//musb_disable_idle(1);
+	//android_usb_set_connected(1);
 	return 0;
 }
 
 static int cpcap_usb_connected_remove(struct platform_device *pdev)
 {
 	/* Enable low power state for MUSB */
-	musb_disable_idle(0);
-	android_usb_set_connected(0);
+	//musb_disable_idle(0);
+	//android_usb_set_connected(0);
 	return 0;
 }
 
